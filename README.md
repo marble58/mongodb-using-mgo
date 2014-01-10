@@ -1,4 +1,4 @@
-mongodb
+mongodb-using-mgo
 =======
 
-Connect to MongoDB
+Connect to MongoDB by using mgo.
