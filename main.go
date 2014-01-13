@@ -9,8 +9,8 @@ import (
 const dbHost = "localhost"
 
 type User struct {
-	Id bson.ObjectId
-	Name string
+	Id    bson.ObjectId
+	Name  string
 	Email string
 }
 
@@ -33,7 +33,7 @@ func main() {
 
 	// Insert the documents into the "users" collection.
 	err = c.Insert(&User{bson.NewObjectId(), "Taro Yamada", "taro.yamada@example.com"},
-	&User{bson.NewObjectId(), "Hanako Tanaka", "hanako.tanaka@example.com"})
+		&User{bson.NewObjectId(), "Hanako Tanaka", "hanako.tanaka@example.com"})
 	handleError(err)
 
 	// Find the all documents
@@ -48,7 +48,7 @@ func main() {
 	// Update the document of "Hanako Tanaka".
 	err = c.Update(bson.M{"name": "Hanako Tanaka"}, bson.M{"$set": bson.M{"email": "hanako.tanaka@updated.com"}})
 	handleError(err)
-	
+
 	// Find the all documents
 	findAll(c)
 

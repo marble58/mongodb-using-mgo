@@ -2,8 +2,8 @@ package main
 
 import (
 	"labix.org/v2/mgo"
-	"testing"
 	"strconv"
+	"testing"
 )
 
 func TestMain(t *testing.T) {
